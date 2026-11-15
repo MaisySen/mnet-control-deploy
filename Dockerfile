@@ -1,6 +1,6 @@
 # Prepared only. Pushing this into the deploy repository triggers deployment.
-FROM golang:1.26.6-bookworm AS build
-ARG MNET_COMMIT=257c39e8137fceb04509e71dc7ec8b2eadad8e89
+FROM golang:1.26.11-bookworm AS build
+ARG MNET_COMMIT=538e856823033a1adc2bc5b7d21bde0879e70b9e
 WORKDIR /src
 RUN git clone --no-checkout https://github.com/MaisySen/Mnet.git . \
     && git checkout --detach "${MNET_COMMIT}" \
