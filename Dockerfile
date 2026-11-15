@@ -3,4 +3,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
 COPY mnet-control /usr/local/bin/mnet-control
 ENV PORT=10000
 EXPOSE 10000
-CMD ["sh", "-c", "exec /usr/local/bin/mnet-control -listen :${PORT} -data /tmp/mnet-control.json"]
+CMD ["sh", "-c", "exec /usr/local/bin/mnet-control -listen :${PORT} -data /tmp/mnet-control.json -default-network fintex"]
